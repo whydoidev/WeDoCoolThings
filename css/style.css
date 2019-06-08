@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css?family=Jura:400,700|Roboto:100,400&display=swap');
+
+body {
+  background-color: #f5f5f5;
+  font-family: 'Jura', sans-serif;
+  line-height: 1.5;
+  text-align: center;
+  color: #6f6f6f;
+  transition: background-color 2s;
+}
+
+.about-active {
+  background-color: #c6c8a7;
+}
+
+.stationary-active {
+  background-color: red;
+}
+
+header {
+  background-image: url(../images/tinted.png);
+  height: 100vh;
+  /* top right bottom left */
+  padding: 50px 0 0 0;
+  background-position: center;
+  background-size: cover;
+}
+
+h1 {
+  margin: 0 0 20px 0;
+  text-align: center;
+}
+header h2{
+  color: #ffffff;
+}
+
+header h3 {
+  color: #ffffff;
+}
+nav a {
+  padding: 0 15px;
+  /* removes blue underline */
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 16px;
+  font-family: 'Jura', sans-serif;
+  font-weight: 700;
+}
+.nav-span {
+  font-size: 32px;
+}
+
+nav a:hover {
+  text-decoration: underline;
+    color: #ebc10b;
+}
+
+
+
+
+/* just use . and then class to adress the particular class */
+.introduction {
+  /* thickness style colour */
+  border-bottom: 2px solid #e6e6e6;
+}
+
+h3 {
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* h2 padding can be used to organise text by maniplating the space of the element possibly margin  can do so too */
+h2 {
+  font-size: 34px;
+  margin-left: 80px;
+  margin-right: 80px;
+  text-align: center;
+}
+
+.container {
+  padding-top: 175px;
+  padding-bottom: 175px;
+  border-bottom: 2px solid #e6e6e6;
+}
+.hero-text {
+  vertical-align: middle;
+}
+
+p {
+  margin: 30px 0;
+  padding: 0 80px;
+}
+
+/* only apply to images inside sections */
+section img {
+  margin-bottom: 20px;
+}
+
+.services {
+  background-color: white;
+}
+
+.services p {
+  padding: 0 20px;
+}
+
+footer {
+  background-color: #000000
+}
+footer.container {
+  height:400px;
+}
+
+h4 {
+  color: #6f6f6f;
+  margin-top: 30px;
+  font-size: 18px;
+}
+
+p.episodes {
+  font-size: 48px;
+}
+
+/* this is styling our email text field /* input[type="email"] */
+.name {
+  width: 60%;
+  border: 2px white solid;
+  padding: 8px;
+  text-align: center;
+  border-radius: 5px;
+  outline: none;
+  margin-bottom: 10px;
+  font-size: 18px;
+  transition: border 0.5s;
+}
+
+.email {
+  width: 60%;
+  border: 2px white solid;
+  padding: 8px;
+  text-align: center;
+  border-radius: 5px;
+  outline: none;
+  margin-bottom: 10px;
+  font-size: 18px;
+  transition: border 0.5s;
+}
+
+.email:focus {
+  border: 2px solid #333333
+}
+textarea {
+width: 100%;
+border: 2px white solid;
+padding: 8px;
+text-align: center;
+border-radius: 5px;
+outline: none;
+margin-bottom: 10px;
+font-size: 18px;
+transition: border 0.5s;
+height:100px;
+}
+
+.button, button {
+  width: 60%;
+  background-color: transparent;
+  border: 2px solid #333333;
+  border-radius: 5px;
+  padding: 10px;
+  text-transform: uppercase;
+  transition: all 0.5s;
+  margin-bottom: 40px;
+}
+
+.button:hover {
+  color: #000000;
+  border-color: #ebc10b;
+  font-weight: 700;
+}
+
+footer p {
+  /* used full style because we are reseting previous paragraph styles{ */
+  margin-bottom: 0 0 20px 0;
+  padding: 0;
+}
+
+footer a {
+  color: #6f6f6f;
+  text-decoration: none;
+}
+
+footer a:hover {
+  background-color: #ebc10b;
+  text-decoration: none;
+}
+
+small {
+  color: white;
+}
+
+.lightbox {
+  /* Fix the lightbox to the page so it can be scrolled past */
+  position: fixed;
+  top: 0;
+  left: 0;
+  /* make the lightbox fill the screen*/
+  width: 100%;
+  height: 100vh;
+  /*add a semi-transparent dark background */
+  background-color: rgba(0, 0, 0, 0.8);
+  /*this hides the lightbox  */
+  /*rgba allows us to create semi-transparent colours. it has 4 values red green blue, alpha. The channels have a minimum value of 0 and a maximum of 255. The alpha channel sets trasparent -1 completely opaque,0 being completely transparent. This is the only colour representation that allows trasparency   */
+  /* we would usually use display none to hide an element, but this cant be animated.So Instead...*/
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+  /* smooth transition between opacity and height */
+  transition: height 0s, opacity 0.5s;
+}
+
+.lightbox img {
+  /* to put */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.fadeIn {
+  height: 100vh;
+  opacity: 1;
+  transition: 1s
+}
+
+/* mobile styles */
+@media screen and (max-width: 480px) {
+  nav a {
+    display: block;
+    padding: 5px;
+    font-size: 8px;
+  }
+
+  h2 {
+    font-size: 12px;
+    padding: 0 0 0 0;
+  }
+
+  p {
+    padding: 0 0 0 0;
+  }
+
+  .container {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    width: 100%;
+  }
