@@ -240,9 +240,12 @@ small {
   nav a {
     display: block;
     padding: 5px;
-    font-size: 12px;
+    font-size: 16px;
     padding: 5px;
   }
+  header{
+  border-bottom: 2px solid #e6e6e6;
+}
 
   h2 {
     font-size: 16px;
